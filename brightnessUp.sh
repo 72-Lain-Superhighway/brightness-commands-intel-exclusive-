@@ -8,7 +8,7 @@ jump=$(("$maxBrightness / 20"))
 brightnessDifference=$(("$maxBrightness" - "$brightness"))
 maxRange=$(("$maxBrightness" - "$jump"))
 
-if [ "$brightness" - ge "$maxRange" ] && [ "$brightness" -le "$maxBrightness" ]
+if [ "$brightness" -ge "$maxRange" ] && [ "$brightness" -le "$maxBrightness" ]
 then
   echo $maxBrightness > /sys/class/backlight/intel_backlight/brightness
 
